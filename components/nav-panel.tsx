@@ -4,7 +4,18 @@ import type React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "./button"
-import { Home, Users, ChevronRight, User, BarChart3, AlertTriangle, Settings, FileText, HelpCircle } from "lucide-react"
+import {
+  Home,
+  Users,
+  ChevronRight,
+  User,
+  BarChart3,
+  AlertTriangle,
+  Settings,
+  FileText,
+  HelpCircle,
+  LayoutDashboard,
+} from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface NavigationItem {
@@ -32,6 +43,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
   Settings,
   FileText,
   HelpCircle,
+  LayoutDashboard,
 }
 
 export function NavPanel({ items, collapsed = false, showFooter = true, className, ...props }: NavPanelProps) {

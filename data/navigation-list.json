@@ -5,6 +5,11 @@
     "href": "/o11y"
   },
   {
+    "label": "Dashboards",
+    "icon": "LayoutDashboard",
+    "href": "/o11y/dashboards"
+  },
+  {
     "label": "Users",
     "icon": "Users",
     "href": "/o11y/users"
