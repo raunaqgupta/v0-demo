@@ -4,7 +4,7 @@ import type React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "./button"
-import { Home, Users, ChevronRight, User } from "lucide-react"
+import { Home, Users, ChevronRight, User, BarChart3, AlertTriangle, Settings, FileText, HelpCircle } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface NavigationItem {
@@ -21,12 +21,17 @@ interface NavPanelProps extends React.HTMLAttributes<HTMLDivElement> {
   showFooter?: boolean
 }
 
-// Icon mapping
+// Icon mapping - expanded to include more icons
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Home,
   Users,
   ChevronRight,
   User,
+  BarChart3,
+  AlertTriangle,
+  Settings,
+  FileText,
+  HelpCircle,
 }
 
 export function NavPanel({ items, collapsed = false, showFooter = true, className, ...props }: NavPanelProps) {
@@ -38,7 +43,7 @@ export function NavPanel({ items, collapsed = false, showFooter = true, classNam
 
   const renderNavigationItem = (item: NavigationItem, level = 0) => {
     const active = item.href ? isActive(item.href) : false
-    const IconComponent = iconMap[item.icon]
+    const IconComponent = iconMap[item.icon] || Home // Fallback to Home icon if not found
 
     return (
       <div key={item.label} className={cn("space-y-1", level > 0 && "ml-4")}>
