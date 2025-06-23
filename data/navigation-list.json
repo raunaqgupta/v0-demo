@@ -5,8 +5,13 @@
     "href": "/o11y"
   },
   {
-    "label": "Users",
-    "icon": "Users",
-    "href": "/o11y/users"
+    "label": "Dashboards",
+    "icon": "Home",
+    "href": "/o11y/dashboards"
+  },
+  {
+    "label": "Alerts",
+    "icon": "Home",
+    "href": "/o11y/alerts"
   }
 ]
