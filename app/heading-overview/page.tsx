@@ -26,12 +26,12 @@ export default function HeadingOverviewPage() {
         <div className="space-y-4">
           <Heading level={2}>All Heading Levels</Heading>
           <div className="space-y-3 border rounded-lg p-6">
-            <Heading level={1}>Heading 1 - 24px</Heading>
-            <Heading level={2}>Heading 2 - 20px</Heading>
-            <Heading level={3}>Heading 3 - 16px</Heading>
-            <Heading level={4}>Heading 4 - 14px</Heading>
-            <Heading level={5}>Heading 5 - 14px</Heading>
-            <Heading level={6}>Heading 6 - 12px</Heading>
+            <Heading level={1}>Heading 1</Heading>
+            <Heading level={2}>Heading 2</Heading>
+            <Heading level={3}>Heading 3</Heading>
+            <Heading level={4}>Heading 4</Heading>
+            <Heading level={5}>Heading 5</Heading>
+            <Heading level={6}>Heading 6</Heading>
           </div>
         </div>
 
@@ -51,21 +51,6 @@ export default function HeadingOverviewPage() {
 
                 <Heading level={3}>Subsection</Heading>
                 <p className="text-sm text-muted-foreground">More detailed content in subsections.</p>
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              <Heading level={3}>Custom Styling</Heading>
-              <div className="border rounded-lg p-6 space-y-3">
-                <Heading level={1} className="text-blue-600">
-                  Colored Heading
-                </Heading>
-                <Heading level={2} className="text-center">
-                  Centered Heading
-                </Heading>
-                <Heading level={3} className="uppercase tracking-wide">
-                  Styled Heading
-                </Heading>
               </div>
             </div>
           </div>
