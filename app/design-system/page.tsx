@@ -68,6 +68,18 @@ export default function DesignSystemPage() {
                 </Button>
               </div>
             </Link>
+
+            <Link href="/related-content-overview" className="block">
+              <div className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                <h3 className="font-medium mb-2">Related Content Component</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Horizontal group of buttons for related content and quick actions
+                </p>
+                <Button size="sm" iconAfter={ArrowRight}>
+                  View Component
+                </Button>
+              </div>
+            </Link>
           </div>
         </div>
 
