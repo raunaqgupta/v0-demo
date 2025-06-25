@@ -120,7 +120,8 @@ export default function RelatedContentOverviewPage() {
         <div className="space-y-4">
           <Heading level={2}>Basic Example</Heading>
           <div className="border rounded-lg p-6 bg-white">
-            <RelatedContent title="Related Resources" items={sampleItems} />
+            <h3 className="text-sm font-medium text-gray-700 mb-3">Related Resources</h3>
+            <RelatedContent items={sampleItems} />
           </div>
         </div>
 
@@ -132,21 +133,24 @@ export default function RelatedContentOverviewPage() {
             <div className="space-y-3">
               <h3 className="font-medium">Article Navigation</h3>
               <div className="border rounded-lg p-6 bg-white">
-                <RelatedContent title="Related Articles" items={articleItems} />
+                <h4 className="text-sm font-medium text-gray-700 mb-3">Related Articles</h4>
+                <RelatedContent items={articleItems} />
               </div>
             </div>
 
             <div className="space-y-3">
               <h3 className="font-medium">Quick Actions</h3>
               <div className="border rounded-lg p-6 bg-white">
-                <RelatedContent title="Quick Actions" items={actionItems} />
+                <h4 className="text-sm font-medium text-gray-700 mb-3">Quick Actions</h4>
+                <RelatedContent items={actionItems} />
               </div>
             </div>
 
             <div className="space-y-3">
               <h3 className="font-medium">Navigation Links</h3>
               <div className="border rounded-lg p-6 bg-white">
-                <RelatedContent title="Quick Navigation" items={navigationItems} />
+                <h4 className="text-sm font-medium text-gray-700 mb-3">Quick Navigation</h4>
+                <RelatedContent items={navigationItems} />
               </div>
             </div>
           </div>
@@ -159,15 +163,16 @@ export default function RelatedContentOverviewPage() {
             The component automatically limits to 5 buttons maximum. Additional items are ignored.
           </p>
           <div className="border rounded-lg p-6 bg-white">
-            <RelatedContent title="Limited to 5 Items (7 provided)" items={maxItemsExample} />
+            <h4 className="text-sm font-medium text-gray-700 mb-3">Limited to 5 Items (7 provided)</h4>
+            <RelatedContent items={maxItemsExample} />
           </div>
         </div>
 
-        {/* Without Title */}
+        {/* Without External Title */}
         <div className="space-y-4">
-          <Heading level={2}>Without Title</Heading>
+          <Heading level={2}>Without External Title</Heading>
           <div className="border rounded-lg p-6 bg-white">
-            <RelatedContent items={sampleItems} title="" />
+            <RelatedContent items={sampleItems} />
           </div>
         </div>
 
@@ -176,7 +181,8 @@ export default function RelatedContentOverviewPage() {
           <Heading level={2}>Responsive Behavior</Heading>
           <p className="text-sm text-muted-foreground">Buttons wrap to new lines on smaller screens automatically.</p>
           <div className="border rounded-lg p-6 bg-white max-w-sm">
-            <RelatedContent title="Narrow Container" items={sampleItems} />
+            <h4 className="text-sm font-medium text-gray-700 mb-3">Narrow Container</h4>
+            <RelatedContent items={sampleItems} />
           </div>
         </div>
 
@@ -199,12 +205,6 @@ export default function RelatedContentOverviewPage() {
                   <td className="p-3 text-sm">RelatedContentItem[]</td>
                   <td className="p-3 text-sm">required</td>
                   <td className="p-3 text-sm">Array of button items to display</td>
-                </tr>
-                <tr>
-                  <td className="p-3 font-mono text-sm">title</td>
-                  <td className="p-3 text-sm">string</td>
-                  <td className="p-3 text-sm">"Related Content"</td>
-                  <td className="p-3 text-sm">Title displayed above the buttons</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-mono text-sm">maxItems</td>
@@ -265,10 +265,10 @@ const items = [
 
 export default function MyPage() {
   return (
-    <RelatedContent 
-      title="Quick Links"
-      items={items}
-    />
+    <div>
+      <h3>Quick Links</h3>
+      <RelatedContent items={items} />
+    </div>
   )
 }`}
             </pre>

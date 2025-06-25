@@ -17,17 +17,10 @@ interface RelatedContentItem {
 
 interface RelatedContentProps extends React.HTMLAttributes<HTMLDivElement> {
   items: RelatedContentItem[]
-  title?: string
   maxItems?: number
 }
 
-export function RelatedContent({
-  items,
-  title = "Related Content",
-  maxItems = 5,
-  className,
-  ...props
-}: RelatedContentProps) {
+export function RelatedContent({ items, maxItems = 5, className, ...props }: RelatedContentProps) {
   // Limit items to maxItems (default 5)
   const displayItems = items.slice(0, maxItems)
 
@@ -37,8 +30,6 @@ export function RelatedContent({
 
   return (
     <div className={cn("space-y-3", className)} {...props}>
-      {title && <h3 className="text-sm font-medium text-gray-700">{title}</h3>}
-
       <div className="flex flex-wrap gap-2">
         {displayItems.map((item, index) => {
           const buttonProps = {
